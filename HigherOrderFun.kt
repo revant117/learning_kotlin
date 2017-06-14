@@ -4,7 +4,7 @@ fun main(args: Array<String>){
 
     var multiplicator3 = makeMultiplicator(3)
     var c = multiplicator3(3)
-
+    getMethod(3 , makeMultiplicator(4))
     println("$c")
 }
 
@@ -13,7 +13,6 @@ fun makeMultiplicator(num:Int)  :(Int) -> Int {  // this method will return a me
 }
 
 // passing functions as argument
-
 fun getMethod(num:Int , meth: (num:Int) -> Int) {
-
+    println(meth(num))
 }
